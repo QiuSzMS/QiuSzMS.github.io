@@ -1,2 +1,2 @@
-# QiuSzMS.github.io
-This is my personal HomePage. Students can download my course notes here.
+邱才颙 深圳中学数学科组
+这是我的个人主页，学生可以在这里下载我的选修课讲义。
