@@ -1,6 +1,7 @@
 这是我（邱才颙 深圳中学数学科组）的个人主页。[关于我](https://qiuszms.github.io/aboutme)
 
-我的联系方式：+86 167 5387 2357，Wechat ID：TeacherCaiyongQiu （添加我的微信之前请注明届数-班级-学生名称）, Email: qiucaiyong2357@gmail.com。紧急事件请直接致电，非紧急事件请微信留言。
+我的联系方式：+86 167 5387 2357，Wechat ID：TeacherCaiyongQiu （添加我的微信之前请注明届数-班级-学生名称）。紧急事件请直接致电，非紧急事件请微信留言。
+电子邮箱：qiucaiyong2357@gmail.com。
 
 Fun Fact: 我的手机号的后四位不仅是前四个素数，2357本身也是素数，实际上167，5387也都是素数，67，38723，538723也都是素数。
 
