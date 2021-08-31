@@ -4,6 +4,8 @@
 
 电子邮箱：qiucaiyong2357@gmail.com。
 
+[深圳中学泥岗校区地图](https://qiuszms.github.io/nigang_map.jpeg)
+
 Fun Fact: 我的手机号的后四位不仅是前四个素数，2357本身也是素数，实际上167，5387也都是素数，67，38723，538723也都是素数。
 
 [2021-2022教学事务](https://qiuszms.github.io/2021-2022)
