@@ -1,0 +1,372 @@
+\documentclass{report}
+\usepackage{amsmath,amssymb}
+\newcommand{\week}[1]{$$\textsf{--- ---WEEK #1--- ---}$$}
+\newcommand{\Mat}[4]{\begin{pmatrix}{#1}&{#2}\\{#3}&{#4}\end{pmatrix}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{\textbf{Arithmetic I Exercises}}
+\author{Boyang Guo}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+\setcounter{tocdepth}{0}
+\tableofcontents
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Rudiments}
+\week{1}
+Suppose we have a family of sets $\mathcal{C}$. If for each pair of elements $X,Y\in \mathcal{C}$, we have either $X = Y$ or $X \cap Y = \varnothing$, then we say that $\mathcal{C}$ is a disjoint family of sets or a non-intersecting family of sets. The union of all sets in $\mathcal{C}$ is denoted by
+$$\bigsqcup_{X \in \mathcal{C}} X$$
+We'll make the assumption that the notation $\bigsqcup$ is only used for a non-intersecting family of sets. That is
+$$Y = \bigsqcup_{X \in \mathcal{C}} X$$
+if and only if
+$$
+\begin{cases}
+Y = \bigcup_{X \in \mathcal{C}} X\\
+((\forall X_1,X_2 \in \mathcal{C}),X_1\cap X_2 \neq \varnothing) \Rightarrow (X_1=X_2)
+\end{cases}
+$$
+For any set $X$, we use the notation $2^X$ to denote the set of all subsets of $X$. That is
+$$2^X = \{Y|Y \subset X\}$$
+\section{}
+Suppose $f:X\rightarrow Y$ is a mapping. Prove that
+$$X=\bigsqcup_{y\in Y} f^{-1}(\{y\})$$
+\section{}
+Let $f:X\rightarrow Y,g:Y\rightarrow X$ be two mappings. Prove that if $gf=\text{id}_X$, then $f$ is injective and $g$ is surjective. 
+\section{}
+Use 1.3 to prove that: $f$ is invertible $\Leftrightarrow$ $ f$ is bijective. 
+\section{}
+Consider the mapping $f:X\rightarrow X$ where $X$ is a finite set. Prove that the following six properties are equivalent.
+\begin{align*}
+&f\text{ is injective } &&f\text{ is surjective } &&f\text{ is bijective}\\
+&f\text{ is left-invertible} &&f\text{ is right-invertible} &&f\text{ is invertible}
+\end{align*}
+\section{}
+Suppose $X_1,X_2,\cdots,X_n$ are countable (infinite) sets, prove that their Cartesian product $$X_1\times X_2\times \cdots \times X_n$$is a countable (infinite) set.
+\section{}
+Suppose $\sim$ is a equivalence relation on $X$. For every $x\in X$, define a set $[x]$ to be
+$$\left[x\right]=\{y \in X |x\sim y\} (=\{y \in X|y\sim x\} )$$
+Prove that
+\begin{enumerate}
+\item Given $x_1,x_2 \in X$, we must have $[x_1] = [x_2]$ or $[x_1]\cap[x_2]= \varnothing$
+\item $\displaystyle\bigcup_{x\in X} \left[x\right]=X$
+\end{enumerate}
+(In other words, we have $X = \displaystyle\bigsqcup_{x\in X}[x]$)
+
+We define the \textbf{quotient set of $X$ under the relation $\sim$} to be
+\[(X/\sim) = \{[x]|x \in X\}\]
+Apparently, we have $(X/\sim) \subset 2^X$.
+
+A \textbf{partition} $\mathcal{C}$ of a set $X$ is defined to be a subset of $2^X$ such that every element $W \in \mathcal{C}$ is nonempty and
+\[X = \bigsqcup_{W \in \mathcal{C}} W\]
+Prove that $(X/\sim)$ is a partition of $X$.
+\newpage\week{2}
+\section{}
+Denote the set of all equivalence relations on $X$ by $\text{ER}(X)$. Denote the set of all partitions of $X$ by $\text{Par}(X)$. For any equivalence relation $\sim \in \text{ER}(X)$, we define a partition $\pi_X(\sim) \in \text{Par}(X)$ by
+\[\pi_X(\sim)=(X/\sim)=\{[x]|x \in X\}\text{, where }[x]=\{y \in X| x\sim y\}\]
+\begin{enumerate}
+\item Prove that $\text{ER}(X)\subset 2^{(X^2)}$
+\item Prove that $\text{Par}(X) \subset 2^{(2^X)}$
+\item Prove that $\pi_X$ is a bijection
+\end{enumerate}
+We will denote the inverse of $\pi_X$ by $\rho_X$. Prove that if $\mathcal{C}\in\text{Par}(X)$, then $(x_1,x_2)\in \rho_X(\mathcal{C})$ if and only if there exists $W \in \mathcal{C}$ such that $x_1,x_2 \in W$.
+
+\textbf{Remark.} 
+
+Sets $\text{ER}(X)$ and $\text{Par}(X)$ have the same cardinality. When $\text{Card}(X) = n$, we have $\text{Card}(\text{ER}(X))=\text{Card}(\text{Par}(X))=B_n$, where $B_n$ is the $n$-th Bell number.
+\section{}
+Suppose $\sim \in \text{ER}(X)$, we define a mapping $p_\sim: X \rightarrow \pi_X(\sim)$ by
+\[p_\sim (x)= [x]\]
+Suppose $f: X \rightarrow Y$ is a mapping such that $fx_1=fx_2$ whenever $x_1\sim x_2$. Prove that there exists exactly one mapping $f_\sim : \pi_X(\sim)\rightarrow Y$ such that
+\[f = \left( X \xrightarrow{p_\sim} \pi_X(\sim) \xrightarrow{f_\sim} Y\right)\]
+The mapping $f_\sim$ is called the induced mapping of $f$ by $\sim$.
+\section{}
+Suppose $f:X \rightarrow Y$ is a mapping, we define a relation $\sim_f$ on $X$ by
+\[x_1 \sim_f x_2\text{ if and only if }fx_1=fx_2\]
+Prove that $\sim_f$ is an equivalence relation on $X$ and 
+\[\pi_X({\sim_f})=\{f^{-1}(\{y\})|y \in \text{Im}f\}\]
+Prove that the induced mapping of $f$ by $\sim_f$ is injective, and it is surjective if and only if $f$ is surjective. Conclude that every mapping is a composition of a projection and an injection.
+\section{}
+In this exercise, we only consider positive integers
+\begin{enumerate}
+\item Prove that $\text{gcd}(n,m)|n,\text{gcd}(n,m)|m$
+\item Prove that $n|\text{lcm}(n,m),m|\text{lcm}(n,m)$
+\item Suppose $d|n,d|m$, prove that $d|\text{gcd}(n,m)$
+\item Suppose $n|D,m|D$, prove that $\text{lcm}(n,m)|D$
+\end{enumerate}
+\section{}
+Let $a \in \mathbf{Z}, b \in \mathbf{N}$. Prove that there exists $q,r \in \mathbf{Z}$ where $0\le r<b$ such that $a = bq+r$. Show that $q,r$ are \textbf{uniquely} determined by $a,b$.
+\section{}
+Show that if $n,m \in \mathbf{Z}$
+\[\{an+bm|a,b \in \mathbf{Z}\} = \text{gcd}(n,m)\mathbf{Z}\]
+\section{}
+Prove that $\{4k+1|k \in \mathbf{N}\}\cap \mathbf{P}$ and $\{4k-1|k \in \mathbf{N}\}\cap \mathbf{P}$ are infinite sets.
+\section{}
+The Euler totient function $\varphi:\mathbf{N} \rightarrow \mathbf{N}$ is defined by the following:
+\[\varphi(n)=  \text{Card}(\{m \in \mathbf{N}| 1\le m \le n, \text{gcd}(n,m)=1\})\]
+For example, $\varphi(1) = 1, \varphi(2) = 1, \varphi(3) = 2, \varphi(4) = 2, \varphi (5) = 4$. Show that
+\[\frac{\varphi(n)}{n} = \prod_{v_p(n) > 0} \left(1-\frac{1}{p}\right)\]
+\section{}
+Suppose $(X,*)$ is a magma, where for every $a,b \in X$ we have
+\[(a*b)*b=a,a*(a*b)=b\]
+Prove that $a*b=b*a$ for every $a,b \in X$.
+\newpage\textbf{Remark 1}\newline
+Suppose $r \in \mathbf{Q}$ is a non-zero rational number, then we can write is as $r = \pm \frac{q}{Q}$ where $q,Q \in \mathbf{N}$. The $p$-adic valuation of $r$ is defined by
+\[v_p(r) = v_p(q) - v_p(Q)\]
+Notice that this definition is well-defined and is an extension of the original $v_p$. We define the support set of $r$ to be
+\[\text{Supp}(r) = \{p \in \mathbf{P}| v_p(r) \neq 0\}\]
+This set is always finite. For example,
+\[\text{Supp}\left(\frac{9}{14}\right) = \{2,3,7\}\]
+Use this notion, we have
+\[\frac{\varphi(n)}{n} = \prod_{p \in \text{Supp}(n)}\left(1-\frac{1}{p}\right)\]
+We devide the set $\text{Support}(r)$ into two non-intersecting subsets:
+\begin{align*}
+\text{Supp}^+(r) &=\{p \in \mathbf{P}| v_p(r)  > 0\}\\
+\text{Supp}^-(r) &=\{p \in \mathbf{P}| v_p(r)  < 0\}
+\end{align*}
+If $r \in \mathbf{Z}_{\neq 0}$, then $\text{Supp}(r) = \text{Supp}^+(r) $. We define
+\[\mathbf{Z}_{(p)} = \{r \in \mathbf{Q}|p \notin \text{Supp}^-(r)\}\]
+\newline
+\textbf{Remark 2}\newline
+This may be boring, but if $r \in \mathbf{Q}_{\neq 0}$, then we have
+\[|r| = \prod_{p \in \text{Supp}(r)} p^{v_p(r)}\]
+Or, equivalently,
+\[\ln |r| = \sum_{p \in \text{Supp}(r)} v_p(r) \ln p\]
+We define a function $|\cdot|_p: \mathbf{Q} \rightarrow \mathbf{R}_{\ge 0}$ by
+\[|r|_p=\begin{cases}p^{-v_p(r)},& r\neq 0\\0,&r=0\end{cases}\]
+Then we have
+\begin{itemize}
+\item $|r_1-r_2|_p = 0$ if and only if $r_1 = r_2$
+\item $|r_1r_2|_p = |r_1|_p|r_2|_p$
+\item $|r_1-r_2|_p+|r_2-r_3|_p \ge |r_1-r_3|_p$
+\end{itemize}
+\newpage
+\week{3}
+\section{}
+Let $m$ be an odd natural number, prove that
+\[\frac{\sin m x}{\sin x} = (-4)^{\frac{m-1}{2}} \prod_{j = 1}^{\frac{m-1}{2}}\left(\sin^2 x - \sin^2\frac{2\pi j}{m}\right)\]
+\section{}
+Suppose we have a system of sets and mappings:
+\[A_1 \xleftarrow{\phi_2} A_2 \xleftarrow{\phi_3} A_3 \xleftarrow{\phi_4} A_4 \leftarrow \cdots\]
+where every $A_n$ is a non-empty finite set. Prove that we can find a sequence of elements $x_1 \in A_1, x_2 \in A_2,\dots, x_n \in A_n, \dots$, such that
+\[\phi_2 x_2 = x_1, \phi_3 x_3 = x_2, \dots\]
+\section{}
+Show that 1.17 is wrong if we do not acquire every $A_n$ to be finite.
+\section{}
+Let $p$ be a prime number, and $n \in \mathbf{Z}$ such that $\text{gcd}(p,n) = 1$. Prove that
+\[p|(n^{p-1}-1)\]
+\section{}
+Let $p$ be a prime number, and $0<n<p$ is an integer. Prove that
+\[p|\text{C}_p^n\]
+where $\text{C}_p^n = \frac{p!}{n!(p-n)!}$
+\section{}
+Let $B_n$ be the $n$-th Bell number. Let $p$ be a prime number. Show that
+\[p|(B_{n+p}-B_{n+1}-B_n)\]
+\chapter{Algebraic Structures}
+\week{4}
+\section*{Groups}
+\section{}
+Let $(M,*)$ be a semigroup, if $N \subset M$ is a subset such that for all $a,b \in N$ we have $a*b \in N$, then we say that $N \mathop{\subset}_* M$, or $N$ is a sub-semigroup of $M$. Prove or disprove:
+\begin{itemize}
+\item If $M$ is a monoid, then $N$ is a monoid
+\item If $M$ does not have an identity, then $N$ does not have an identity
+\item If $M$ and $N$ are monoids, then their identities are the same one
+\end{itemize}
+\section{}
+Let $M$ be a monoid (which is by definition a semigroup), and denote the set of all invertible elements of $M$ by $\text{U}(M)$, show that $\text{U}(M)$ is a sub-semigroup of $M$ and itself is even a group. We call it the group of units of $M$.
+\section{}
+Let $\Omega$ be a set, and $M(\Omega) = \{f: \Omega \rightarrow \Omega\}$ be the set of mappings, together with the composition operation $\circ$.
+\begin{itemize}
+\item Show that $\text{U}(M(\Omega))$ is the set of all bijective mappings.
+\item If $\Omega = \{1,2,\dots,n\}$, we denote $\text{U}(M(\Omega))$ by $\text{S}_n$. Show that $\text{Card}(\text{S}_n) = n!$
+\end{itemize}
+\section{}
+Let $(G,*)$ be a group (which is by definition a semigroup), and $H \subset_* G$ is a sub-semigroup of $G$. Show that if
+\begin{enumerate}
+\item the identity $e \in H$
+\item for all $h \in H$ we have $h^{-1} \in H$
+\end{enumerate}
+Then $H$ is not only a semigroup, it is a group.
+\section{}
+Let $(G,*)$ be a group (which is by definition a semigroup), and $H \subset_* G$ is a sub-semigroup of $G$. Show that if $H$ is a group, then
+\begin{enumerate}
+\item the identity $e \in H$
+\item for all $h \in H$ we have $h^{-1} \in H$
+\end{enumerate}
+\section{}
+Show that $H$ is a subgroup of $G$ if and only if $H$ is a nonempty subset of $G$ and for all $h_1,h_2 \in H$ we have $h_1^{-1}h_2 \in H$.
+\section{}
+Show that if $\varphi: G_1 \rightarrow G_2$ is an isomorphism, then $f(e_1)$ is the identity of $G_2$, where $e_1$ is the identity of $G_1$.
+\section{}
+Show that if $\varphi: G_1 \rightarrow G_2$ is an isomorphism, then $f(a^{-1}) = (f(a))^{-1}$.
+\section{}
+Let $G$ be a group, we define a new magma $(G^\text{op},*)$ by $x*y = yx$. Show that $(G^\text{op},*)$ is actually a group, called the opposite group of $G$.
+\section{}
+Show that $G$ and $G^{\text{op}}$ are isomorphic (=find an isomorphism between them).
+\section{}
+Show that if $\varphi: G_1 \rightarrow G_2$ is an isomorphism, then the inverse mapping $\varphi^{-1}$ is an isomorphism. Show that if $\varphi: G \rightarrow H$ and $\psi: H \rightarrow K$ are isomorphisms, then their composition
+\[\psi \circ \varphi: G \rightarrow K\]
+is an isomorphism.
+\section{}
+An automorphism of a group $G$ is an isomorphism from $G$ to $G$. Denote the set of all automorphisms of $G$ by $\text{Aut}(G)$. Show that $\text{Aut}(G)$ is a subgroup of $\text{Perm}(G) = \text{U}(M(G))$. (Hint: Use \textbf{2.7})
+\section{}
+Give an example of two non-isomorphic groups of cardinality $4$.
+\section{}
+Write down the Cayley table for $\text{S}_3$ and for $\text{Aut}(\text{S}_3)$. Are these two groups isomorphic?
+\section{}
+Let $G$ be a group, we define $\text{SG}(G)$ to be the sets of all subgroups of $G$. Suppose $S\subset G$ is a \textbf{subset}, we define
+\[\langle S\rangle = \bigcap_{S \subset H \in \text{SG}(G)} H\]
+\begin{enumerate}
+\item Prove that $\text{SG}(G)$ is closed under arbitrary intersection.
+\item Deduce that $\langle S\rangle \in \text{SG}(G)$, which is called the subgroup generated by $S$. If $G = \langle S \rangle$, we say that $G$ is generated by $S$.
+\end{enumerate}
+\section{}
+Show that $\text{S}_4$ can be generated by $\{(12),(13),(14)\}$.
+
+Show that $\text{S}_4$ can be generated by $\{(12),\theta\}$, here $\theta$ is the mapping $\theta(1) = 2,\theta(2) = 3, \theta(3) = 4,\theta(4) = 1$.
+\section{}
+Find all subgroups of $\text{S}_4$.
+\section{}
+$\text{S}_n$ is called the $n$-th symmetric group. We write down some of its elements:
+\[(12) = \begin{cases}1\mapsto 2\\2\mapsto 1\\ 3\mapsto 3\\\vdots\\n \mapsto n\end{cases},(13) = \begin{cases}1\mapsto 3\\2\mapsto 2\\ 3\mapsto 1\\\vdots\\n \mapsto n\end{cases},\dots,(1n) = \begin{cases}1\mapsto n\\2\mapsto 2\\ 3\mapsto 3\\\vdots\\n \mapsto 1\end{cases},\theta = \begin{cases}1\mapsto 2\\2\mapsto 3\\ 3\mapsto 4\\\vdots\\n-1 \mapsto n\\n\mapsto 1\end{cases}\]
+\begin{enumerate}
+\item Prove that $\text{S}_n$ is generated by $\{(12),(13),\dots,(1n)\}$.
+\item Prove that $\text{S}_n$ is generated by $\{(12),\theta\}$.
+\item Prove the Cayley's theorem: every finite group of cardinality $n$ is isomorphic to some subgroup of $\text{S}_n$.
+\end{enumerate}
+\section{}
+Construct a non-abelian group of cardinality $8$.
+\section{}
+For $n = 1,2,3,4,5,6,7,8,9,10,11$, classify all groups of cardinality $n$.
+\newpage
+\week{5}
+\section*{Rings and Fields}
+
+\chapter{Ring-theoretic Constructions}
+\chapter{Linear Algebra}
+\chapter{Finite Fields and Reciprocity}
+\chapter{$p$-adic Numbers}
+\chapter{Hilbert Symbol}
+\end{document}
+
+\section{}
+Let $G$ be a group, we define $\text{SG}(G)$ to be the sets of all subgroups of $G$. Suppose $S\subset G$ is a \textbf{subset}, we define
+\[\langle S\rangle = \bigcap_{S \subset H \in \text{SG}(G)} H\]
+\begin{enumerate}
+\item Prove that $\text{SG}(G)$ is closed under arbitrary intersection.
+\item Deduce that $\langle S\rangle \in \text{SG}(G)$, which is called the subgroup generated by $S$. If $G = \langle S \rangle$, we say that $G$ is generated by $S$.
+\item Elements of the form $s_1^{\epsilon_1}s_2^{\epsilon_2}\cdot\cdots\cdot s_n^{\epsilon_n}$ where $s_i \in S, \epsilon_i \in \mathbf{Z}$ are called $S$-words. Prove that every element of $\langle S\rangle$ is a $S$-word.
+\item Suppose $S = \{a\}$ contains one element, we also write $\langle a \rangle$ for $\langle \{a\} \rangle$. This group is automatically a cyclic subgroup of $G$.
+
+Suppose $a,b \in G$ with $ab = ba$, and that $\langle a \rangle$ is a finite group of order $n$, $\langle b \rangle$ is a finite group of order $m$ where $\text{gcd}(n,m) = 1$.
+
+Prove that $\langle \{a,b\} \rangle$ is a cyclic group of order $nm$.
+\item Consider $a = \Mat{0}{1}{-1}{0}, b = \Mat{0}{1}{-1}{-1}$ (as elements of $\text{SL}_2(\mathbf{Z})$ if you want). Prove that these two are elements of finite order, such that $ab$ is an element of infinite order. Also, calculate $\langle \{a,b\} \rangle$.
+\end{enumerate}
+\section{}
+Recall that a mapping is invertible if and only if it is bijective. The set of bijections from a set $S$ to itself, together with the operation of mapping-composition, is a group, denoted by $\text{Perm}(S)$. If $S = \{1,2,\dots,n\}$ we also write
+\[\text{S}_n = \text{Perm}(\{1,2,\dots,n\})\]
+This is called the $n$-th symmetric group. We write down some of its elements:
+\[(12) = \begin{cases}1\mapsto 2\\2\mapsto 1\\ 3\mapsto 3\\\vdots\\n \mapsto n\end{cases},(13) = \begin{cases}1\mapsto 3\\2\mapsto 2\\ 3\mapsto 1\\\vdots\\n \mapsto n\end{cases},\dots,(1n) = \begin{cases}1\mapsto n\\2\mapsto 2\\ 3\mapsto 3\\\vdots\\n \mapsto 1\end{cases},\theta = \begin{cases}1\mapsto 2\\2\mapsto 3\\ 3\mapsto 4\\\vdots\\n-1 \mapsto n\\n\mapsto 1\end{cases}\]
+\begin{enumerate}
+\item Prove that $\text{S}_n$ is generated by $\{(12),(13),\dots,(1n)\}$.
+\item Prove that $\text{S}_n$ is generated by $\{(12),\theta\}$.
+\item Prove the Cayley's theorem: every finite group of order $n$ is isomorphic to some subgroup of $\text{S}_n$.
+\item Prove that every finite group is a subgroup of some bi-generated group (=group that can be generated by only two elements).
+\item
+Recall that there is a group homomorphism $\sigma_G: G \rightarrow \text{Aut}(G)$ for every group $G$, defined by
+\[\left(G \xrightarrow{\sigma_G (a)} G \right)= \left( g \mapsto aga^{-1} \right)\]
+Prove that if $G = \text{S}_n$ where $n \neq 2,6$, then $\sigma_G$ is an isomorphism.
+\item Prove that there is only one epimorphism from $\text{S}_n$ to $\text{S}_2$ (where $n \ge 2$).
+\item Prove that $\text{S}_n$ has only one subgroup, of order $\frac{1}{2}\text{Card}(\text{S}_n)$. This subgroup is called the $n$-th alternating group, denoted by $\text{A}_n$.
+\end{enumerate}
+\section{}
+In this exercise, we study the arithmetics of cyclic groups.
+\begin{enumerate}
+\item Suppose $G$ is a cyclic group, and $H$ is a subgroup of $G$. Prove that $H$ is also a cyclic group.
+\item Suppose $G$ is a cyclic group of infinite order, and $H$ is a non-trivial subgroup of $G$. Prove that $H$ is also a cyclic group of infinite order.
+\item Suppose $G$ is a cyclic group of order $n$, and $H$ is a subgroup of $G$. Prove that the order of $H$ divides $n$.
+\item Suppose $G$ is a cyclic group of order $n$, and $m$ is a natural number dividing $n$. Prove that $G$ has a unique subgroup of order $m$.
+\item Let $G$ be a cyclic group of order $n$. An element $g \in G$ is called a generator of $G$ if $G = \langle g \rangle$. Prove that the number of generators of $G$ is $\varphi(n)$.
+\item Prove that $\sum_{d|n}\varphi(d) = n$. (Hint: How many elements of $\text{C}_n$, the cyclic group of order $n$, generates a (cyclic) group of order $d$?)
+\item For any group $G$, we define
+\[\mathbf{u}_d(G) = \{g \in G| g^d = 1\}, u_d(G) = \text{Card}(\mathbf{u}_d(G))\]
+Let $G$ be a cyclic group of order $n$, and let $d|n$. Prove that $u_d(G) = d$.
+\item
+Suppose $G$ is finite, and $u_d(G) \le d$ for all $d \in \mathbf{N}$. Prove that $G$ is cyclic.
+\end{enumerate}
+\textbf{Remark}\newline
+Use the language of exact sequences, there is an exact sequence for each $G$:
+\[0 \rightarrow \text{Z}(G) \rightarrow G \xrightarrow{\sigma_G} \text{Aut}(G) \rightarrow \text{Out}(G) \rightarrow 0\]
+So, we have
+\begin{itemize}
+\item the kernel of $\sigma_G$ is the centre of $G$, $\text{Z}(G)$
+\item the image of $\sigma_G$ is the inner automorphism group of $G$, $\text{Inn}(G)$
+\item the cokernel of $\sigma_G$ is the abelianization of $G$, $G^{\text{ab}}$
+\item the coimage of $\sigma_G$ is the outer automorphism group of $G$, $\text{Out}(G)$
+\end{itemize}
+All important invariants of the group $G$.
+
+Inner automorphisms are precisely those automorphisms expressible using a formula that is guaranteed to always yield an automorphism. So this type of automorphisms is indeed very important and fundamental.
+\newline\textbf{Remark}\newline
+Let $S = \{x,y\}$, the set of all $S$-words is a famous group $\text{F}_2$, called the free group on two generators.
+
+Analogously we can define $\text{F}_n$ for any $n \in \mathbf{N}$. The interesting thing is, $\text{F}_n$ is always isomorphic to some subgroup of $\text{F}_2$. So $\text{F}_2$ is not `smaller' than $\text{F}_n$. I also want to point out that, mathematicians usually use topology to study such problems. A purely algebraic approach is possible though.
+\newline\textbf{Remark}\newline
+The set $\text{SG}(G)$ is not only a set. It can be realized as a lattice (an algebraic structure, but we won't study it). This lattice also contains a lot of information of the group $G$, and sometimes can be drawn using Hasse diagram.
+
+
+\newpage
+\section*{Extra Problems}
+Two groups are different means essentially nothing, since different groups can be isomorphic and have the same group-theoretic properties.
+
+So can we construct a set $\text{Grp}_n$, such that every group of order $n$ is isomorphic to exactly one element in $\text{Grp}_n$? The first attempt might be like this: consider the set $T_n$ of all groups of order $n$ and define an equivalence relation on $T_n$ that two groups are equivalent if and only if they are isomorphic.
+
+Unfortunately, there is no such thing as the set of all groups of order $n$. It is too big to be a set, just like there is no set of all sets. This is not a very big problem, since we can change our mathematical foundations from \textsf{ZFC} set theory to something else. (We can even abandon set theories.)
+
+But we can still get a construction of $\text{Grp}_n$ safely, by using Cayley's theorem. Just define the set $\text{Grp}_n$ to be some subset of the set of all subgroups of $\text{S}_n$ of order $n$. (Details omitted)
+
+Anyway, we now have a good set $\text{Grp}_n$, which is finite, and containing `all' groups of order $n$. We can ask many questions, the first one being:
+\section{}
+Compute $\gamma_n = \text{Card}(\text{Grp}_n)$ for small $n$.
+\newline
+Answer:
+
+Type 1: $n$ is a prime number
+
+$\gamma_1 = \gamma_2 = \gamma_3 = \gamma_5 = \gamma_7 = \gamma_{11} = \gamma_{13} = \gamma_{17} = \cdots = 1$
+
+Type 2: $n= p^2$ is a square of a prime number
+
+$\gamma_4 = \gamma_9 = \gamma_{25} = \gamma_{49} = \cdots = 2$
+
+Type 3: $n=  p^3$ is a cube of a prime number
+
+$\gamma_8 = \gamma_{27} = \gamma_{125} = \cdots = 5$
+
+Type 4: $n$ and $\varphi(n)$ are co-prime. In this case $\gamma_n = 1$.
+
+Other than these four types, we don't know much. But we have $\gamma_n \le \text{C}_{n!}^n$ trivially. Maybe it's the time to enjoy the sequence $\gamma_n$ itself:
+
+1, 1, 1, 2, 1, 2, 1, 5, 2, 2, 1, 5, 1, 2, 1, 14, 1, 5, 1, 5, 2, 2, 1, 15, 2, 2, 5, 4, 1, 4, 1, 51, 1, 2, 1, 14, 1, 2, 2, 14, 1, 6, 1, 4, 2, 2, 1, 52, 2, 5, 1, 5, 1, 15, 2, 13, 2, 2, 1, 13, 1, 2, 4, 267, ...
+\section{}
+There is another cardinality we can ask about $\text{Grp}_n$, called the \textbf{homotopy-cardinality}, it is defined by
+\[\text{h}\gamma_n = \sum_{G \in \text{Grp}_n}\frac{1}{\text{Card}(\text{Aut}(G))}\]
+I (Qi\=u C\'aiy\'ong) don't know whether $\sum_{n = 1}^\infty \text{h}\gamma_n$ is finite or not = the groupoid of finite groups is tame or not.
+\section{}
+Another (very) dangerous problem is this: We can define
+\[\text{Aut}^{n+1}(G) = \text{Aut}(\text{Aut}^n(G))\]
+What can we say about $\text{Aut}^n(G)$? Here I quote only one theorem:
+\[\]
+\newline
+\textbf{Theorem}(Wielandt, 1939) Suppose $G$ is finite and $\sigma_G : G \rightarrow \text{Aut}(G)$ is injective, then there exists $n \in \mathbf{N}$ such that $\text{Aut}^{n+1}(G)$ is isomorphic to $\text{Aut}^{n}(G)$.
+\[\]
+Later we will learn about the inverse limit of an inverse system of groups
+\[\varprojlim(G_1 \xleftarrow{\phi_2} G_2 \xleftarrow{\phi_3} G_3 \xleftarrow{\phi_4} G_4 \leftarrow \cdots )\]
+We can as well consider the direct limit of a direct system of groups. This enables us to define $\text{Aut}^\omega (G)$ for every ordinal 
+$\omega$. (Using $\text{Aut}^\omega (G) \xrightarrow{\sigma} \text{Aut}^{\omega+1} (G)$)
+
+We can naively ask the question: what is the smallest $\omega$ such that $\text{Aut}^{\omega+1}(G)$ is isomorphic to $\text{Aut}^{\omega}(G)$? It should only depend on $G$, right?
+
+Well, the answer is, it depends on the version of set theory you're using.
