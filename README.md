@@ -4,6 +4,8 @@
 
 选修课 21LA 线性代数资料：[课程讲义](https://qiuszms.github.io/21LA.pdf) [5引理补充材料](https://qiuszms.github.io/21LA_5lemma.pdf) [对偶空间补充材料](https://qiuszms.github.io/21LA_DualSpaces) [附加题](https://qiuszms.github.io/21LA_ExtraProblems) [期末试卷和答案](https://qiuszms.github.io/21LA_Final.pdf)
 
+选修课 22MA 数学分析：[课程大纲](https://qiuszms.github.io/22MA.pdf) 请注意该大纲并不完整，不足以用来自学，应该视为Rudin的《数学分析》的补充材料
+
 [2022-2023教学事务](https://qiuszms.github.io/2022-2023)，包括最新的选修课23FA Fourier分析
 
 ------
