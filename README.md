@@ -6,6 +6,8 @@
 
 选修课 22MA 数学分析：[课程大纲](https://qiuszms.github.io/22MA.pdf) 请注意该大纲并不完整，不足以用来自学，应该视为Rudin的《数学分析》的补充材料
 
+选修课 22CA 算术I：[Hensel引理及其证明](https://qiuszms.github.io/23CA_Hensel.pdf)
+
 [2022-2023教学事务](https://qiuszms.github.io/2022-2023)，包括最新的选修课23FA Fourier分析
 
 ------
