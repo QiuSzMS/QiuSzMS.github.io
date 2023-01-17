@@ -21,5 +21,3 @@ Wechat ID：TeacherCaiyongQiu （添加我的微信之前请注明级数（入�
 紧急事件请直接致电，非紧急事件请微信留言
 
 电子邮箱：qiucaiyong2357@gmail.com，仅用于提交选修课作业
-
-[我也不知道答案的问题](https://qiuszms.github.io/Unknown)
