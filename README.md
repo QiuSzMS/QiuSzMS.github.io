@@ -6,7 +6,7 @@
 
 选修课 22MA 数学分析：[课程大纲](https://qiuszms.github.io/22MA.pdf) 请注意该大纲并不完整，不足以用来自学，应该视为Rudin的《数学分析》的补充材料
 
-选修课 22CA 算术I：[Hensel引理及其证明](https://qiuszms.github.io/23CA_Hensel.pdf)
+选修课 22CA 算术I：[p进数回顾](https://qiuszms.github.io/23CA_p-adic_field.pdf) [Hensel引理及其证明](https://qiuszms.github.io/23CA_Hensel.pdf) [p进数的乘法结构](https://qiuszms.github.io/23CA_adic_multi.pdf)
 
 注：22CA的内容事实上发现对高中生来说非常难，涉及知识特别多，故23年春夏学期降低难度。希望开设数论课程的老师应加以重新设计，例如：取消p进数，或者只讲p进数
 
