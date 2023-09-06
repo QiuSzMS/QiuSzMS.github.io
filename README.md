@@ -20,7 +20,7 @@
 
 选修课 23NT 数论1: [课程讲义](https://qiuszms.github.io/23NT.pdf)
 
-选修课（领军计划） 23AA 抽象代数
+选修课（领军计划） 23AA 抽象代数：[课程主页](https://qiuszms.github.io/23AA)
 
 [2023-2024教学事务](https://qiuszms.github.io/2023-2024)
 
