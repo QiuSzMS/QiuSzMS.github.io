@@ -22,7 +22,7 @@
 
 选修课（领军计划） 23AA 抽象代数：[课程主页](https://qiuszms.github.io/23AA)
 
-[2023-2024教学事务](https://qiuszms.github.io/2023-2024)
+[2023-2024教学事务](https://qiuszms.github.io/2023-2024/)
 
 ------
 
