@@ -1,5 +1,7 @@
 这是我（邱才颙 深圳中学数学科组）的个人主页
 
+[2025-2026教学事务](https://qiuszms.github.io/2025-2026)
+
 ------
 
 选修课 21LA 线性代数资料：[课程讲义](https://qiuszms.github.io/21LA.pdf) [5引理补充材料](https://qiuszms.github.io/21LA_5lemma.pdf) [对偶空间补充材料](https://qiuszms.github.io/21LA_DualSpaces.pdf) [附加题](https://qiuszms.github.io/21LA_ExtraProblems.pdf) [期末试卷和答案](https://qiuszms.github.io/21LA_Final.pdf)
@@ -12,19 +14,22 @@
 
 选修课 23FA 傅立叶分析
 
-选修课 23NT24NT 数论
+选修课 23NT24NT 数论 数论1: [课程讲义](https://qiuszms.github.io/23NT.pdf)
+
+选修课（领军计划） 23AA 抽象代数：[课程主页](https://qiuszms.github.io/23AA)
 
 选修课 24RG 反射群：[课程讲义（持续更新中）]
+
+选修课（领军计划）25SG 群的结构
 
 ------
 
 目前学期（2023-2024秋冬学期）的选修课:
 
-选修课 23NT 数论1: [课程讲义](https://qiuszms.github.io/23NT.pdf)
-
-选修课（领军计划） 23AA 抽象代数：[课程主页](https://qiuszms.github.io/23AA)
 
 [2023-2024教学事务](https://qiuszms.github.io/2023-2024)
+
+[2025-2026教学事务](https://qiuszms.github.io/2025-2026)
 
 ------
 
